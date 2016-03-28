@@ -38,16 +38,20 @@
         box-sizing: border-box;
         text-align: center;
     }
+h3{
+text-align:center;
+color:#777777;}
     </style>
 </head>
 
 <body>
     <div class="container">
+<h3>Banner Animation</h3>
         <iframe frameborder="0" height="200px" width="100%"></iframe>
         <div class="url"></div>
         <div class="controls">
             <input type="text" placeholder="Text.." id="name" onkeyup="updateAnimation()">
-            <input type="text" placeholder="Speed.." id="speed" onkeyup="updateAnimation()">
+            <input type="text" placeholder="Speed in second.." id="speed" onkeyup="updateAnimation()">
         </div>
     </div>
     <script>
@@ -67,7 +71,7 @@
 
         var speed = document.getElementById("speed").value;
         if (speed == "") {
-            spaed = 2;
+            speed = 2;
         }
 
 
@@ -80,7 +84,7 @@
         var showUrl = document.getElementsByClassName("url")[0];
         url = url.split("?")[1];
 
-        showUrl.innerText = "?" + url;
+        showUrl.innerText = "animation.html?" + url;
     }
     </script>
 </body>
