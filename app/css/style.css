@@ -1,0 +1,49 @@
+ /*CONTAINER
+-----------------------*/
+ .container {
+     width: 60%;
+     margin: auto;
+     max-width: 500px;
+ }
+ 
+ h1 {
+     text-align: center;
+     color: #777;
+     font-size: 1.8em;
+ }
+
+ /*INPUT
+-----------------------*/
+ input {
+     padding: 10px;
+     width: 100%;
+     box-sizing: border-box;
+     margin: 5px 0;
+ }
+ 
+ .url {
+     width: 100%;
+     background: #ccc;
+     padding: 10px;
+     box-sizing: border-box;
+     text-align: center;
+ }
+
+
+ 
+ /*RESPONSIVE
+-----------------------*/
+ 
+ @media all and (max-width: 767px) {
+     .container {
+         width: 90%;
+         margin: auto;
+         max-width: 500px;
+     }
+
+      /*IFRAME
+-----------------------*/
+ iframe {
+        height: 34vw;
+    }
+ }

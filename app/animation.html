@@ -1,79 +1,15 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <title>Animation</title>
-    <style type="text/css">
-    body {
-        overflow: hidden;
-        margin: 0;
-    }
-    
-    .banner {
-        padding: 9vw 0 12vw;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-family: monospace;
-    }
-    
-    .fadeIn {
-        font-size: 10vw;
-        text-align: center;
-        color: transparent;
-        -webkit-animation: fadeInFadeOut 3s ease-in backwards;
-        -moz-animation: fadeInFadeOut 3s ease-in backwards;
-        -ms-animation: fadeInFadeOut 3s ease-in backwards;
-        animation: fadeInFadeOut 3s ease-in backwards;
-        animation-iteration-count: infinite;
-    }
-    
-    @keyframes fadeInFadeOut {
-        0% {
-            opacity: 0;
-            text-shadow: 0px 0px 40px #fff;
-            transform: scale(1.3);
-        }
-        20%,
-        75% {
-            opacity: 1;
-            text-shadow: 0px 0px 1px #fff;
-            transform: scale(1);
-        }
-        100% {
-            opacity: 0;
-            text-shadow: 0px 0px 50px #fff;
-            transform: scale(0);
-        }
-    }
-    </style>
+    <link rel="stylesheet" href="css/animation.css">
 </head>
 
 <body>
     <div class="banner">
         <div id="banner" class="fadeIn"></div>
     </div>
-    <script type="text/javascript">
-    function getParam(name) {
-        url = window.location.href.toLowerCase();
-        name = name.replace(/[\[\]]/g, "\\$&").toLowerCase();
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-
-    var text = getParam('text'),
-        speed = getParam('speed'),
-        bg = getParam('bg'),
-        bannerId = document.querySelector('#banner');
-    bannerId.innerHTML = text;
-
-    bannerId.setAttribute('style', 'animation-duration:' + speed + 's');
-
-    bannerId.parentElement.style.background = bg;
-    </script>
+    <script src="js/animation.js"></script>
 </body>
-
 </html>

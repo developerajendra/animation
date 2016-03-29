@@ -5,84 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animation</title>
-    <style>
-    .container {
-        width: 60%;
-        margin: auto;
-        max-width: 500px;
-    }
-    
-    @media all and (max-width: 767px) {
-        .container {
-            width: 90%;
-            margin: auto;
-            max-width: 500px;
-        }
-    }
-    
-    input {
-        padding: 10px;
-        width: 100%;
-        box-sizing: border-box;
-        margin: 5px 0;
-    }
-    
-    iframe {
-        height: 18vw;
-    }
-    
-    .url {
-        width: 100%;
-        background: #ccc;
-        padding: 10px;
-        box-sizing: border-box;
-        text-align: center;
-    }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="container">
+        <h1>Banner Animation</h1>
         <iframe frameborder="0" height="200px" width="100%"></iframe>
-        <div class="url"></div>
+        <div class="url">&nbsp;</div>
         <div class="controls">
-            <input type="text" placeholder="Text.." id="name" onkeyup="updateAnimation()">
-            <input type="text" placeholder="Speed.." id="speed" onkeyup="updateAnimation()">
+            <input type="text" placeholder="Type text.." id="name" onkeyup="updateAnimation()">
+            <input type="text" placeholder="Speed in seconds, lower is faster.. " id="speed" onkeyup="updateAnimation()">
         </div>
     </div>
-    <script>
-    function updatecolor() {
-        updateAnimation();
-    }
-
-
-
-    updateAnimation();
-
-    function updateAnimation() {
-        var name = document.getElementById("name").value;
-        if (name == "") {
-            name = "hello world";
-        }
-
-        var speed = document.getElementById("speed").value;
-        if (speed == "") {
-            spaed = 2;
-        }
-
-
-
-
-        var url = "animation.html?text=" + name + "&speed=" + speed + "&bg=blue";
-        var iframe = document.getElementsByTagName("iframe")[0];
-        iframe.setAttribute("src", url);
-
-        var showUrl = document.getElementsByClassName("url")[0];
-        url = url.split("?")[1];
-
-        showUrl.innerText = "?" + url;
-    }
-    </script>
+    <script src="js/main.js"></script>
 </body>
-
 </html>
