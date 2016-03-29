@@ -12,7 +12,7 @@
      //Insert default speed
      var speed = document.getElementById("speed").value;
      if (speed == "") {
-         spaed = 2;
+         speed = 2;
      }
 
      //Updating the iframe name and speed
